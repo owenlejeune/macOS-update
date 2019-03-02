@@ -30,5 +30,5 @@ $ softwareupdate -d <NAME>
 ### Installation
 #### Manual
 1. Clone to repo
-2. Execute the script from the cloned directory using `$ ./maco-supdate`
+2. Execute the script from the cloned directory using `$ ./macos-update`
 3. **Optional:** add the cloned folder to your system PATH to use anyway
