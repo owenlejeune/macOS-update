@@ -4,25 +4,25 @@ A simple CLI tool handling macOS software updates
 ### Usage
 macosupdate offers several options for controlling how software updates are handled. When no options are specified, macosupdate will install all available updates
 ```bash
-$ macos-update
+$ macosupdate
 # equivalent to
 $ software -i -a
 ```
 Using the **list** argument allows you to view a list of all availbe updates without installing them.
 ```bash
-$ macos-update list
+$ macosupdate list
 # equivalent to
 $ softwareupdate -l
 ```
 Using the **install** argument allows you to install a specific software updated based on the update name.
 ```bash
-$ macos-update install <NAME>
+$ macosupdate install <NAME>
 # equivalent to
 $ softwareupdate -i <NAME>
 ```
 Using the **download** argument allows you to download a specific software updated based on the update name *without* installing it.
 ```bash
-$ macos-update download <NAME>
+$ macosupdate download <NAME>
 # equivalent to
 $ softwareupdate -d <NAME>
 ```
@@ -30,5 +30,5 @@ $ softwareupdate -d <NAME>
 ### Installation
 #### Manual
 1. Clone to repo
-2. Execute the script from the cloned directory using `$ ./macos-update`
+2. Execute the script from the cloned directory using `$ ./macosupdate`
 3. **Optional:** add the cloned folder to your system PATH to use anyway
