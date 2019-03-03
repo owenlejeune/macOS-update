@@ -2,16 +2,16 @@
 
 if [ "$#" = 0 ];
 then
-    # softwareupdate -i -a
-    echo "softwareupdate -i -a"
+    echo "Installing all softwareupdates..."
+    softwareupdate -i -a
 elif [ "$1" = "list" ];
 then
     if [ "$#" -ne 1 ];
     then
         echo "Command list expected no arguments, got $(($#-1))"
     else
-        # softwareupdate -l
-        echo "softwareupdate -l"
+        echo "Listing available softwareupdates..."
+        softwareupdate -l
     fi
 elif [ "$1" = "install" ];
 then
@@ -19,8 +19,8 @@ then
     then
         echo "Command install expected 1 argument, got $(($#-1))"
     else
-        # softwareupdate -i "$2"
-        echo "softwareupdate -i $2"
+        echo "Installing softwareupdate $2..."
+        softwareupdate -i "$2"
     fi
 elif [ "$1" = "download" ];
 then
@@ -28,8 +28,8 @@ then
     then
         echo "Command download expected 1 argument, got $(($#-1))"
     else
-        # softwareupdate -d "$2"
-        echo "softwareupdate -d $2"
+        echo "Downloading softwareupdate $2..."
+        softwareupdate -d "$2"
     fi
 elif [ "$1" = "-h" ];
 then
