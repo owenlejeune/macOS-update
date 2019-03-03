@@ -1,38 +1,30 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-if [ "$#" = 0 ];
-then
+if [ "$#" = 0 ]; then
     echo "Installing all softwareupdates..."
     softwareupdate -i -a
-elif [ "$1" = "list" ];
-then
-    if [ "$#" -ne 1 ];
-    then
+elif [ "$1" = "list" ]; then
+    if [ "$#" -ne 1 ]; then
         echo "Command list expected no arguments, got $(($#-1))"
     else
         echo "Listing available softwareupdates..."
         softwareupdate -l
     fi
-elif [ "$1" = "install" ];
-then
-    if [ "$#" -ne 2 ];
-    then
+elif [ "$1" = "install" ]; then
+    if [ "$#" -ne 2 ]; then
         echo "Command install expected 1 argument, got $(($#-1))"
     else
         echo "Installing softwareupdate $2..."
         softwareupdate -i "$2"
     fi
-elif [ "$1" = "download" ];
-then
-    if [ "$#" -ne 2 ];
-    then
+elif [ "$1" = "download" ]; then
+    if [ "$#" -ne 2 ]; then
         echo "Command download expected 1 argument, got $(($#-1))"
     else
         echo "Downloading softwareupdate $2..."
         softwareupdate -d "$2"
     fi
-elif [ "$1" = "-h" ];
-then
+elif [ "$1" = "-h" ]; then
     echo "Usage: macosupdate [<COMMAND>] [<OPTION>]"
     echo "[<COMMAND>]:"
     echo "  list"
