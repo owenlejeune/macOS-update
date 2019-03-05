@@ -32,3 +32,13 @@ $ softwareupdate -d <NAME>
 1. Clone to repo
 2. Execute the script from the cloned directory using `$ ./macosupdate`
 3. **Optional:** add the cloned folder to your system PATH to use anyway
+
+#### Homebrew
+1. Tap the repo
+```shell
+$ brew tap owenlejeune/tools
+```
+2. Install the package
+```shell
+$ brew install macos-update
+```
